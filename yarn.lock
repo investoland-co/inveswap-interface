@@ -2111,7 +2111,7 @@
 
 "@pancakeswap-libs/sdk@https://github.com/investoland-co/inveswap-sdk":
   version "1.0.1"
-  resolved "https://github.com/investoland-co/inveswap-sdk#9e3e08a2f70a1ba9c046b52ddf87a73b1cb6a965"
+  resolved "https://github.com/investoland-co/inveswap-sdk#245a3c8528c50c50a4506c03a2225403e1fd6f9a"
   dependencies:
     "@uniswap/v2-core" "^1.0.0"
     big.js "^5.2.2"
