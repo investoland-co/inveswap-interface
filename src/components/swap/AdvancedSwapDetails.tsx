@@ -88,24 +88,28 @@ export function AdvancedSwapDetails({ trade }: AdvancedSwapDetailsProps) {
     <AutoColumn gap="md">
       {trade && (
         <>
-          <TradeSummary trade={trade} allowedSlippage={allowedSlippage} />
-          {showRoute && (
-            <>
-              <SectionBreak />
-              <AutoColumn style={{ padding: '0 24px' }}>
-                <RowFixed>
-                  <Text fontSize="14px">Route</Text>
-                  <QuestionHelper
-                    text={TranslateString(
-                      999,
-                      'Routing through these tokens resulted in the best price for your trade.'
-                    )}
-                  />
-                </RowFixed>
-                <SwapRoute trade={trade} />
-              </AutoColumn>
-            </>
-          )}
+          <Card>
+            <CardBody>
+              <TradeSummary trade={trade} allowedSlippage={allowedSlippage} />
+              {showRoute && (
+                <>
+                  <SectionBreak />
+                  <AutoColumn style={{ padding: '0 24px' , backgroundColor: '#27262c'}}>
+                    <RowFixed>
+                      <Text fontSize="14px">Route</Text>
+                      <QuestionHelper
+                        text={TranslateString(
+                          999,
+                          'Routing through these tokens resulted in the best price for your trade.'
+                        )}
+                      />
+                    </RowFixed>
+                    <SwapRoute trade={trade} />
+                  </AutoColumn>
+                </>
+              )}
+              </CardBody>
+          </Card>
         </>
       )}
     </AutoColumn>
