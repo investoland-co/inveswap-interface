@@ -191,6 +191,11 @@ export default function CurrencyList({
   )
 
   const itemKey = useCallback((index: number, data: any) => currencyKey(data[index]), [])
+  const invIndex = itemData.findIndex(x => x.symbol === "INV")
+  if (invIndex !== -1) {
+    const invToken = itemData.splice(invIndex,1)[0]
+    itemData.unshift(invToken)
+  }
 
   return (
     <FixedSizeList
