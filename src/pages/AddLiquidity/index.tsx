@@ -43,7 +43,12 @@ export default function AddLiquidity({
   history,
 }: RouteComponentProps<{ currencyIdA?: string; currencyIdB?: string }>) {
   const { account, chainId, library } = useActiveWeb3React()
-  const currencyA = useCurrency('0x45870C2b385EAC7ffb1342600fAc2Ad70C62fd80')
+  if (currencyIdA !== '0x45870C2b385EAC7ffb1342600fAc2Ad70C62fd80') {
+    currencyIdB = '0x45870C2b385EAC7ffb1342600fAc2Ad70C62fd80'
+  } else {
+    currencyIdA = '0x45870C2b385EAC7ffb1342600fAc2Ad70C62fd80'
+  }
+  const currencyA = useCurrency(currencyIdA)
   const currencyB = useCurrency(currencyIdB)
   const TranslateString = useI18n()
 
