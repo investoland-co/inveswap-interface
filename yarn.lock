@@ -2123,7 +2123,7 @@
 
 "@pancakeswap-libs/uikit@https://github.com/investoland-co/pancakeswap-uikit.git":
   version "0.23.0"
-  resolved "https://github.com/investoland-co/pancakeswap-uikit.git#bc7d86abc82e4d469eac03f0cca9e44709b003e5"
+  resolved "https://github.com/investoland-co/pancakeswap-uikit.git#2fd9994dff6baf22990ee32f47543a4dad23cfe9"
   dependencies:
     "@types/lodash" "^4.14.168"
     "@types/styled-system" "^5.1.10"
